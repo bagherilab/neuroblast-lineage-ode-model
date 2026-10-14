@@ -1,4 +1,4 @@
-"""ODE right-hand sides for the base model and Models 1–5."""
+"""Model equations (rates of change of each cell population) for the base model and Models 1–5."""
 import numpy as np
 
 

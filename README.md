@@ -53,14 +53,14 @@ Output is SVG, with text kept as editable text. With the versions in `requiremen
 
 ```
 neuroblast_ode/
-  models.py     ODE right-hand sides
-  params.py     parameters, initial conditions, genotypes
-  solvers.py    solve_ivp wrappers per model
-  ccd.py        cell-cycle duration from solutions
-  plotting.py   styling, end-of-curve count labels, SVG export
-  figures.py    one function per figure
-make_figures.py command-line entry point
-tests/          sanity checks on model behavior
+  models.py     model equations
+  params.py     parameter values, starting conditions and genotype definitions
+  solvers.py    runs each model forward in time over 48 h
+  ccd.py        calculates NB cell-cycle duration from model output
+  plotting.py   shared figure style, final cell-count labels, saving figures
+  figures.py    code for each figure
+make_figures.py run this to generate all figures
+tests/          checks that the models behave as expected (e.g. WT keeps a single NB)
 ```
 
 ## Running tests
