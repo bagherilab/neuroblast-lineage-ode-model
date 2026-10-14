@@ -4,8 +4,8 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "neuroblast-lineage-ode-model"
-version = "0.1.0"
-description = "ODE model and figure generation code for manuscript 'Cell size asymmetry regulates neural stem cell proliferation and lineage expansion in vivo and in silico models'"
+version = "1.0.0"
+description = "ODE model and figure generation code for manuscript 'Cell size asymmetry regulates neural stem cell proliferation and lineage expansion in vivo and in silico models' Cell Reports, 2026."
 readme = "README.md"
 license = "MIT"
 license-files = ["LICENSE"]
