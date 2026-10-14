@@ -22,7 +22,7 @@ Requires Python 3.11 or newer.
 ```bash
 git clone https://github.com/bagherilab/neuroblast-lineage-ode-model.git
 cd neuroblast-lineage-ode-model
-python -m venv .venv
+python3 -m venv .venv              # Windows: py -m venv .venv
 source .venv/bin/activate          # Windows: .venv\Scripts\activate
 pip install -r requirements.txt
 ```
@@ -37,7 +37,7 @@ python make_figures.py --only manuscript       # manuscript | supplemental
 python make_figures.py --out other_dir
 ```
 
-Output is SVG (text kept as text) and EPS. With the versions in `requirements.txt`, timestamps and SVG ids are fixed, so re-running produces byte-identical files.
+Output is SVG, with text kept as editable text. With the versions in `requirements.txt`, timestamps and SVG ids are fixed, so re-running produces byte-identical files.
 
 ## Figures
 
@@ -57,7 +57,7 @@ neuroblast_ode/
   params.py     parameters, initial conditions, genotypes
   solvers.py    solve_ivp wrappers per model
   ccd.py        cell-cycle duration from solutions
-  plotting.py   styling, end-of-curve count labels, SVG/EPS export
+  plotting.py   styling, end-of-curve count labels, SVG export
   figures.py    one function per figure
 make_figures.py command-line entry point
 ```

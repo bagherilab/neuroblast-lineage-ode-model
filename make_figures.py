@@ -1,4 +1,4 @@
-"""Generate all model figures as SVG + EPS.
+"""Generate all model figures as SVG.
 
 Usage:
     python make_figures.py                     # everything into figures/
@@ -8,7 +8,7 @@ Usage:
 import argparse
 import os
 
-# Fixed timestamp in the EPS header so re-running produces byte-identical files
+# Fixed timestamp in the SVG metadata so re-running produces byte-identical files
 os.environ.setdefault("SOURCE_DATE_EPOCH", "0")
 
 import matplotlib

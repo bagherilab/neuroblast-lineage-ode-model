@@ -227,7 +227,7 @@ def add_celltype_legend(fig, y_anchor):
 
 
 def save_figure(fig, out_dir, out_base):
-    """Save fig as <out_dir>/<out_base>.svg and .eps with tight bounding boxes."""
+    """Save fig as <out_dir>/<out_base>.svg with a tight bounding box."""
     mpl.rcParams['mathtext.fontset'] = 'dejavusans'   # match DejaVu Sans
     mpl.rcParams['mathtext.rm'] = 'DejaVu Sans'
 
@@ -237,9 +237,6 @@ def save_figure(fig, out_dir, out_base):
     # Fixed salt so SVG element ids are identical run to run
     mpl.rcParams['svg.hashsalt'] = 'fixed'
 
-    # EPS has poor/no transparency; avoid forced rasterization of transparent artists
-    mpl.rcParams['savefig.transparent'] = False
-
     # Render once to PNG before saving.
     fig.canvas.print_figure(io.BytesIO(), format="png", facecolor=fig.get_facecolor(),
                             edgecolor=fig.get_edgecolor(), dpi=fig.dpi, bbox_inches="tight")
@@ -247,4 +244,3 @@ def save_figure(fig, out_dir, out_base):
     os.makedirs(out_dir, exist_ok=True)
     path = os.path.join(out_dir, out_base)
     fig.savefig(f"{path}.svg", format="svg", bbox_inches="tight")
-    fig.savefig(f"{path}.eps", format="eps", bbox_inches="tight")
