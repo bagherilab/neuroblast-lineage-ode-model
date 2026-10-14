@@ -22,3 +22,7 @@ Repository = "https://github.com/bagherilab/neuroblast-lineage-ode-model"
 
 [tool.setuptools]
 packages = ["neuroblast_ode"]
+
+[tool.pytest.ini_options]
+pythonpath = ["."]
+testpaths = ["tests"]

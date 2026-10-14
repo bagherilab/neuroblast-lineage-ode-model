@@ -60,6 +60,14 @@ neuroblast_ode/
   plotting.py   styling, end-of-curve count labels, SVG export
   figures.py    one function per figure
 make_figures.py command-line entry point
+tests/          sanity checks on model behavior
+```
+
+## Running tests
+
+```bash
+pip install pytest
+pytest
 ```
 
 ## License

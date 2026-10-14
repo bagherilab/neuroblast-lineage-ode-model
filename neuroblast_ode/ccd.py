@@ -2,9 +2,9 @@
 import numpy as np
 
 from .params import (
-    n, V_thresh_NB, V_floor_NB, k_max_NB, V_thresh_min, V_thresh_base, delta_thresh,
-    k_star, K_self,
+    n, V_thresh_NB, V_floor_NB, k_max_NB, V_thresh_min, V_thresh_base, delta_thresh, K_self,
 )
+from .solvers import model5_k_NB_max
 
 
 def _vavg(N, V):  # safe V/N
@@ -66,5 +66,5 @@ def ccd_M4(sol):
 
 def ccd_M5(sol, beta):
     N = np.maximum(sol.y[0], 0.0)
-    k_eff = k_star * (K_self**beta) / (K_self**beta + N**beta)
+    k_eff = model5_k_NB_max(beta) * (K_self**beta) / (K_self**beta + N**beta)
     return _ccd_from_k(k_eff)

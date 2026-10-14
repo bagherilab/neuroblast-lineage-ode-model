@@ -75,10 +75,15 @@ def solve_model4(alpha_growth, sym_frac, g_nb_base_scale=1.0, y0=None,
     )
 
 
+def model5_k_NB_max(p_div):
+    """Max NB division rate for Model 5, scaled so a single NB divides at k_star (CCD = 1.5 h)."""
+    return k_star * ((K_self ** p_div + 1.0) / (K_self ** p_div))
+
+
 def solve_model5(p_div, sym_frac, y0=None,
                  t_eval=t_eval, rtol=1e-6, atol=1e-9, max_step=0.5):
     if y0 is None: y0 = [1.0, 0.0, 0.0, 0.0]
-    k_NB_max = k_star * ((K_self ** p_div + 1.0) / (K_self ** p_div))
+    k_NB_max = model5_k_NB_max(p_div)
     return solve_ivp(
         neuroblast_model_NB_self_repression, t_span, y0, t_eval=t_eval,
         args=([k_NB_max, 1.0/8.0, k_Neuron, K_self, p_div, sym_frac],),
