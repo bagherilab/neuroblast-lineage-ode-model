@@ -1,6 +1,6 @@
 # neuroblast-lineage-ode-model
 
-ODE models of *Drosophila* neuroblast (NB) lineage growth and figure generation code for the manuscript "Cell size asymmetry regulates neural stem cell proliferation and lineage expansion in vivo and in silico models".
+This folder contains all documentation and code required to reproduce the Drosophila neuroblast (NB) lineage growth ODE models and figures presented in "Cell size asymmetry regulates neural stem cell proliferation and lineage expansion in vivo and in silico models", *Cell Reports*, 2026. 
 
 ## Models
 
