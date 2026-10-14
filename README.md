@@ -1,5 +1,7 @@
 # neuroblast-lineage-ode-model
 
+[![DOI](https://zenodo.org/badge/1418170691.svg)](https://doi.org/10.5281/zenodo.23370954)
+
 This folder contains all documentation and code required to reproduce the Drosophila neuroblast (NB) lineage growth ODE models and figures presented in "Cell size asymmetry regulates neural stem cell proliferation and lineage expansion in vivo and in silico models", *Cell Reports*, 2026. 
 
 ## Models
