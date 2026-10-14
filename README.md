@@ -27,7 +27,7 @@ source .venv/bin/activate          # Windows: .venv\Scripts\activate
 pip install -r requirements.txt
 ```
 
-`requirements.txt` documents the exact package versions used to generate the figures in `figures/`. To use the models with your own (newer) package versions instead, run `pip install .`.
+`requirements.txt` documents the exact package versions used to generate the figures in `figures/`.
 
 ## Generating figures
 
