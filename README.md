@@ -4,7 +4,7 @@ ODE models of *Drosophila* neuroblast (NB) lineage growth and figure generation 
 
 ## Models
 
-| Model | Mechanism |
+| Model | Description |
 |---|---|
 | base | Constant division and maturation rates (counts only) |
 | 1 | Volume-dependent NB/GMC division (saturating power law), no feedback |
@@ -27,7 +27,7 @@ source .venv/bin/activate          # Windows: .venv\Scripts\activate
 pip install -r requirements.txt
 ```
 
-`requirements.txt` pins the exact package versions used to generate the figures in `figures/`. To use the models with your own (newer) package versions instead, run `pip install .`.
+`requirements.txt` documents the exact package versions used to generate the figures in `figures/`. To use the models with your own (newer) package versions instead, run `pip install .`.
 
 ## Generating figures
 
